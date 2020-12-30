@@ -28,7 +28,8 @@
       "ie 11"
     ],
     "production": [
-      "ie 11"
+      "> 2%",
+      "IE 11"
     ]
   },
   "devDependencies": {
