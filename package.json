@@ -23,6 +23,14 @@
     "url": "https://github.com/tkmtmkt/study-nodejs/issues"
   },
   "homepage": "https://github.com/tkmtmkt/study-nodejs#readme",
+  "browserslist": {
+    "development": [
+      "ie 11"
+    ],
+    "production": [
+      "ie 11"
+    ]
+  },
   "devDependencies": {
     "@babel/core": "latest",
     "@babel/preset-env": "latest",
