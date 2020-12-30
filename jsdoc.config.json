@@ -3,6 +3,7 @@
     "include": ["README.md", "./src/js"]
   },
   "opts": {
-    "destination": "./dist/jsdoc/"
+    "destination": "./dist/jsdoc/",
+    "recurse": true
   }
 }

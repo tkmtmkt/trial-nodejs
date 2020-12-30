@@ -5,7 +5,7 @@
   "main": "src/js/app.js",
   "scripts": {
     "build": "webpack --mode development && cp -rp src/assets/* dist/",
-    "jsdoc": "jsdoc -r -c jsdoc.config.json",
+    "jsdoc": "jsdoc -c jsdoc.config.json",
     "lint": "eslint src/js",
     "start": "webpack serve",
     "test": "jest"
