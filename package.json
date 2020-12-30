@@ -1,10 +1,12 @@
 {
   "name": "study-nodejs",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "study node.js",
   "main": "src/js/app.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --mode development && cp -rp src/assets/* dist/",
+    "jsdoc": "jsdoc -r -c jsdoc.config.json",
+    "lint": "eslint src/js test/js",
     "start": "webpack serve",
     "test": "jest"
   },
@@ -16,18 +18,26 @@
     "nodejs"
   ],
   "author": "Takamasu Makoto",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/tkmtmkt/study-nodejs/issues"
   },
   "homepage": "https://github.com/tkmtmkt/study-nodejs#readme",
   "devDependencies": {
-    "jest": "^26.6.3",
-    "jquery": "^3.5.1",
-    "jsdom": "^16.4.0",
-    "webpack": "^5.10.1",
-    "webpack-cli": "^4.2.0",
-    "webpack-dev-server": "^3.11.0",
-    "xmlhttprequest": "^1.8.0"
-  }
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "babel-loader": "latest",
+    "eslint": "latest",
+    "jest": "latest",
+    "jest-junit": "latest",
+    "jsdoc": "latest",
+    "webpack": "latest",
+    "webpack-cli": "latest",
+    "webpack-dev-server": "latest"
+  },
+  "dependencies": {
+    "jquery": "latest",
+    "jquery-ui": "latest"
+  },
+  "private": true
 }

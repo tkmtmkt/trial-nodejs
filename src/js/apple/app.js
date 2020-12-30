@@ -1,3 +1,11 @@
+/**
+ * @file app
+ */
+const $=require("jquery");
+
+/**
+ * @param none
+ */
 (function() {
   $("body").append(
     $("<div>").text("hoge")
