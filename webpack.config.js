@@ -20,7 +20,7 @@ module.exports = {
     path: dist,
 
     // 出力するファイル名
-    filename: 'js/[name].js'
+    filename: 'js/[name].js',
   },
 
   devServer: {
@@ -38,8 +38,8 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader'
-      }
-    ]
-  }
+        loader: 'babel-loader',
+      },
+    ],
+  },
 };

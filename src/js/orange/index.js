@@ -1,3 +1,3 @@
-require("./app.js");
+require('./app.js');
 
 console.log(document.title);

@@ -22,10 +22,10 @@ module.exports = {
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   // collectCoverageFrom: undefined,
-  collectCoverageFrom: ["src/**/*.js", "test/**/*.js"],
+  collectCoverageFrom: ['src/**/*.js', 'test/**/*.js'],
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: "dist/reports/coverage",
+  coverageDirectory: 'dist/reports/coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
@@ -33,7 +33,7 @@ module.exports = {
   // ],
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: "v8",
+  coverageProvider: 'v8',
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
@@ -103,19 +103,19 @@ module.exports = {
   // Use this configuration option to add custom reporters to Jest
   // reporters: undefined,
   reporters: [
-    "default",
+    'default',
     [
-      "jest-junit",
+      'jest-junit',
       {
-        suiteName: "jest tests",
-        outputDirectory: "dist/reports/jest",
-        outputName: "js-test-results.xml",
-        classNameTemplate: "{classname}-{title}",
-        titleTemplate: "{classname}-{title}",
-        ancestorSeparator: " > ",
-      }
-    ]
-  ]
+        suiteName: 'jest tests',
+        outputDirectory: 'dist/reports/jest',
+        outputName: 'js-test-results.xml',
+        classNameTemplate: '{classname}-{title}',
+        titleTemplate: '{classname}-{title}',
+        ancestorSeparator: ' > ',
+      },
+    ],
+  ],
 
   // Automatically reset mock state between every test
   // resetMocks: false,
