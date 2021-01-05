@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode development && cp -rp src/assets/* dist/",
     "jsdoc": "jsdoc -c jsdoc.config.json",
-    "lint": "eslint src/js",
+    "lint": "eslint --fix .",
     "start": "webpack serve",
     "test": "jest"
   },
@@ -33,16 +33,19 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "latest",
-    "@babel/preset-env": "latest",
-    "babel-loader": "latest",
-    "eslint": "latest",
-    "jest": "latest",
-    "jest-junit": "latest",
-    "jsdoc": "latest",
-    "webpack": "latest",
-    "webpack-cli": "latest",
-    "webpack-dev-server": "latest"
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.17.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "jest": "^26.6.3",
+    "jest-junit": "^12.0.0",
+    "jsdoc": "^3.6.6",
+    "prettier": "^2.2.1",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.1"
   },
   "dependencies": {
     "jquery": "latest",

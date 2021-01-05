@@ -35,18 +35,21 @@ study-nodejs/
 
 ### 使用パッケージ
 
-パッケージ         | 内容
--------------------|------
-jest               | テストフレームワーク
-jest-junit         | テスト結果をJUnit形式で出力する
-eslint             | スクリプト静的解析ツール
-jsdoc              | ドキュメント生成ツール
-webpack            | webpack本体
-webpack-cli        | webpackのコマンドラインツール
-webpack-dev-server | 開発環境用WEBサーバ
-babel-loader       | webpackでBabelを使えるようにする
-@babel/core        | Babel本体
-@babel/preset-env  | 指定したブラウザ環境で動作するように変換するプラグイン
+パッケージ             | 内容
+-----------------------|------
+jest                   | テストフレームワーク
+jest-junit             | テスト結果をJUnit形式で出力する
+prettier               | コードフォーマッタ
+eslint                 | 構文チェックツール
+eslint-plugin-prettier | Prettier を ESLint 上で実行する
+eslint-config-prettier | ESLint のフォーマット関連のルールを全て無効にする（Prettier が整形した箇所に関してエラーを出さなくなる）
+jsdoc                  | ドキュメント生成ツール
+webpack                | webpack本体
+webpack-cli            | webpackのコマンドラインツール
+webpack-dev-server     | 開発環境用WEBサーバ
+babel-loader           | webpackでBabelを使えるようにする
+@babel/core            | Babel本体
+@babel/preset-env      | 指定したブラウザ環境で動作するように変換するプラグイン
 
 
 操作
@@ -60,7 +63,8 @@ $ npm init -y
 
 # 開発環境用パッケージインストール
 $ npm install --save-dev jest jest-junit
-$ npm install --save-dev eslint
+$ npm install --save-dev prettier
+$ npm install --save-dev eslint eslint-config-prettier eslint-plugin-prettier
 $ npm install --save-dev jsdoc
 $ npm install --save-dev webpack webpack-cli webpack-dev-server
 $ npm install --save-dev @babel/core @babel/preset-env babel-loader
