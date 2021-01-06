@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode development && cp -rp src/assets/* dist/",
     "jsdoc": "jsdoc -c jsdoc.config.json",
-    "lint": "eslint --fix .",
+    "lint": "eslint --fix src",
     "start": "webpack serve",
     "test": "jest"
   },

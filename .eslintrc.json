@@ -2,7 +2,9 @@
     "env": {
         "browser": true,
         "commonjs": true,
-        "es2021": true
+        "es2021": true,
+        "node": true,
+        "jest": true
     },
     "extends": ["eslint:recommended", "plugin:prettier/recommended"],
     "parserOptions": {
@@ -12,8 +14,12 @@
         "prettier/prettier": [
             "error",
             {
+                "printWidth": 120,
+                "tabWidth": 2,
+                "semi": true,
                 "singleQuote": true,
-                "trailingComma": "es5"
+                "trailingComma": "es5",
+                "endOfLine": "lf"
             }
         ]
     }
