@@ -1,5 +1,16 @@
 /**
- * @file orange
+ * title
+ * =====
+ *
+ * * list1
+ * * list2
+ *
+ *  ID | description
+ * ----|-------------
+ *  1  | hoge
+ *  2  | fuga
+ *
+ * @module orange/app
  */
 const $ = require('jquery');
 
