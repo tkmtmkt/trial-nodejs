@@ -28,10 +28,10 @@ pipeline {
         sh 'npm run build'
       }
     }
-    post {
-      always {
-        archiveArtifacts artifacts: 'dist/*', fingerprint: true, followSymlinks: false, onlyIfSuccessful: true
-      }
+  }
+  post {
+    always {
+      archiveArtifacts artifacts: 'dist/*', fingerprint: true, followSymlinks: false, onlyIfSuccessful: true
     }
   }
 }
