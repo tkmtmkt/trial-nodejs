@@ -12,6 +12,11 @@ pipeline {
       steps {
         sh 'npm test -- --coverage'
       }
+      post {
+        always {
+          junit 'dist/reports/jest/js-test-results.xml'
+        }
+      }
     }
     stage('JSDoc') {
       steps {
@@ -21,6 +26,11 @@ pipeline {
     stage('build') {
       steps {
         sh 'npm run build'
+      }
+    }
+    post {
+      always {
+        archiveArtifacts artifacts: 'dist/*', fingerprint: true, followSymlinks: false, onlyIfSuccessful: true
       }
     }
   }
