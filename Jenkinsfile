@@ -3,6 +3,11 @@ pipeline {
     docker 'node:14.15.3-slim'
   }
   stages {
+    stage('prepare') {
+      steps {
+        sh 'npm ci'
+      }
+    }
     stage('test') {
       steps {
         sh 'npm test -- --coverage'
