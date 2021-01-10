@@ -31,7 +31,7 @@ pipeline {
   }
   post {
     always {
-      archiveArtifacts artifacts: 'dist/*', fingerprint: true, followSymlinks: false, onlyIfSuccessful: true
+      archiveArtifacts artifacts: 'dist/**/*', fingerprint: true, followSymlinks: false, onlyIfSuccessful: true
     }
   }
 }
