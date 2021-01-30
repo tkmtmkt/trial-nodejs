@@ -1,0 +1,36 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"dist": true,
+			"node_modules": true,
+			"tool": true
+		},
+		"terminal.integrated.env.linux": {
+			"PATH": "${workspaceRoot}/tool/node-v14.15.3-linux-x64/bin:${env:PATH}"
+		},
+		"terminal.integrated.env.windows": {
+			"PATH": "${workspaceRoot}¥¥tool¥¥node-v14.15.3-win-x64;${env:PATH}"
+		},
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"type": "node",
+				"request": "launch",
+				"name": "Node Deug",
+				"runtimeExecutable": "${workspaceRoot}/tool/node-v14.15.3-linux-x64/bin/node",
+				"program": "${workspaceRoot}/node_modules/.bin/jest",
+				"protocol": "inspector",
+				"args": ["--runInBand", "${file}"],
+				"console": "integratedTerminal",
+				"internalConsoleOptions": "neverOpen"
+			},
+		]
+	},
+}
