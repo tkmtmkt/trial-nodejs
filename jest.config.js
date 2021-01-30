@@ -110,8 +110,10 @@ module.exports = {
         suiteName: 'jest tests',
         outputDirectory: 'dist/reports/jest',
         outputName: 'js-test-results.xml',
-        classNameTemplate: '{classname}-{title}',
-        titleTemplate: '{classname}-{title}',
+        classNameTemplate: (vars) => {
+          return vars.filepath.replace('test/js/', '').split('.')[0].replace(/\//g, '.');
+        },
+        titleTemplate: '{title}',
         ancestorSeparator: ' > ',
       },
     ],
