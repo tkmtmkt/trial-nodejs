@@ -5,11 +5,13 @@
 		}
 	],
 	"settings": {
+		// ファイルエクスプローラに表示するパスの除外設定
 		"files.exclude": {
 			"dist": true,
 			"node_modules": true,
 			"tool": true
 		},
+		// 統合ターミナルの環境変数設定
 		"terminal.integrated.env.linux": {
 			"PATH": "${workspaceRoot}/tool/node-v14.15.3-linux-x64/bin:${env:PATH}"
 		},
@@ -21,15 +23,45 @@
 		"version": "0.2.0",
 		"configurations": [
 			{
+				"name": "Start",
 				"type": "node",
 				"request": "launch",
-				"name": "Node Deug",
+				"runtimeExecutable": "${workspaceRoot}/tool/node-v14.15.3-linux-x64/bin/node",
+				"program": "${file}",
+				"args": [
+				],
+				"windows": {
+					"runtimeExecutable": "${workspaceRoot}¥¥tool¥¥node-v14.15.3-win-x64¥¥node.exe",
+				},
+				"protocol": "inspector",
+				"console": "integratedTerminal",
+				"internalConsoleOptions": "neverOpen",
+				"skipFiles": [
+					"<node_internals>/**/*.js",
+					"node_modules",
+				]
+			},
+			{
+				"name": "Test",
+				"type": "node",
+				"request": "launch",
 				"runtimeExecutable": "${workspaceRoot}/tool/node-v14.15.3-linux-x64/bin/node",
 				"program": "${workspaceRoot}/node_modules/.bin/jest",
+				"windows": {
+					"runtimeExecutable": "${workspaceRoot}¥¥tool¥¥node-v14.15.3-win-x64¥¥node.exe",
+					"program": "${workspaceFolder}¥¥node_modules¥¥jest¥¥bin¥¥jest",
+				},
+				"args": [
+					"--runInBand",
+					"${file}"
+				],
 				"protocol": "inspector",
-				"args": ["--runInBand", "${file}"],
 				"console": "integratedTerminal",
-				"internalConsoleOptions": "neverOpen"
+				"internalConsoleOptions": "neverOpen",
+				"skipFiles": [
+					"<node_internals>/**/*.js",
+					"node_modules",
+				]
 			},
 		]
 	},
