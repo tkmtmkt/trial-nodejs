@@ -1,0 +1,10 @@
+version: '3'
+services:
+  coder:
+    image: codercom/code-server:3.8.0
+    hostname: vscode
+    user: "1000:1000"
+    volumes:
+      - "$PWD/:/home/coder/"
+    ports:
+      - 9080:8080

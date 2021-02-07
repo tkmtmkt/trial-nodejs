@@ -7,8 +7,11 @@
 	"settings": {
 		// ファイルエクスプローラに表示するパスの除外設定
 		"files.exclude": {
+			".cache": true,
+			".config": true,
+			".local": true,
 			"dist": true,
-			"node_modules": true,
+			"node_modules": true,		
 			"tool": true
 		},
 		// 統合ターミナルの環境変数設定
