@@ -1,4 +1,4 @@
-study-nodejs
+trial-nodejs
 ============
 
 概要
